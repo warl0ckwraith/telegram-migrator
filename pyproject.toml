@@ -20,6 +20,17 @@ dependencies = [
 [project.scripts]
 telegram-migrator = "main:run"
 
+[tool.ruff]
+target-version = "py38"
+line-length = 120
+
+[tool.ruff.lint]
+# Classic default rule set: real errors only, no cosmetic style noise.
+select = ["E4", "E7", "E9", "F"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
 [tool.setuptools]
 package-dir = { "" = "src" }
 py-modules = [
